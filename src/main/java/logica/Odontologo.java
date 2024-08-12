@@ -11,7 +11,7 @@ public class Odontologo extends Persona {
     private String horariosAt[];
 
     public Odontologo(int id_odontologo, Usuario usuario_odontologo, List<Turno> listaTurnos, String[] horariosAt, int id, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
-        super(id, nombre, apellido, fechaNac, telefono, dni, direccion);
+        super(nombre, apellido, fechaNac, telefono, dni, direccion);
         this.id_odontologo = id_odontologo;
         this.usuario_odontologo = usuario_odontologo;
         this.listaTurnos = listaTurnos;

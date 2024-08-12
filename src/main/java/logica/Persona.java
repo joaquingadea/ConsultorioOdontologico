@@ -1,7 +1,6 @@
 package logica;
 import java.util.Date;
 public class Persona {
-    private  int id;
     private String nombre;
     private String apellido;
     private Date fechaNac;
@@ -9,22 +8,13 @@ public class Persona {
     private String dni;
     private String direccion;
 
-    public Persona(int id, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
-        this.id = id;
+    public Persona(String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNac = fechaNac;
         this.telefono = telefono;
         this.dni = dni;
         this.direccion = direccion;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {

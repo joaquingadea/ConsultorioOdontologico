@@ -9,7 +9,7 @@ public class Paciente extends Persona{
     private String nombre_responsable;
 
     public Paciente(int id_paciente, boolean tiene_responsable, String nombre_responsable, int id, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
-        super(id, nombre, apellido, fechaNac, telefono, dni, direccion);
+        super(nombre, apellido, fechaNac, telefono, dni, direccion);
         this.id_paciente = id_paciente;
         this.tiene_responsable = tiene_responsable;
         this.nombre_responsable = nombre_responsable;
