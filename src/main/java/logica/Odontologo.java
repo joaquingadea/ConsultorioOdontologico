@@ -7,13 +7,21 @@ public class Odontologo {
     private String nombre;
     private String apellido;
     private List<Especialidad> especialidades= null;
-    private String horariosAt[] = {};
+    private List<Turno> listaTurnos;
+    private String horariosAt[];
 
-    public Odontologo(int id, String nombre, String apellido) {
+    public Odontologo() {
+    }
+
+    public Odontologo(int id, String nombre, String apellido, List<Turno> listaTurnos, String[] horariosAt) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.listaTurnos = listaTurnos;
+        this.horariosAt = horariosAt;
     }
+    
+    
 
     public String getApellido() {
         return apellido;
@@ -53,6 +61,14 @@ public class Odontologo {
 
     public void setHorariosAt(String[] horariosAt) {
         this.horariosAt = horariosAt;
+    }
+
+    public List<Turno> getListaTurnos() {
+        return listaTurnos;
+    }
+
+    public void setListaTurnos(List<Turno> listaTurnos) {
+        this.listaTurnos = listaTurnos;
     }
     
 }

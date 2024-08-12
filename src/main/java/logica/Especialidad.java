@@ -15,7 +15,7 @@ public class Especialidad {
         this.nombre = nombre;
         this.doctoresEsp = doctoresEsp;
     }
-
+    
     public List<Odontologo> getDoctoresEsp() {
         return doctoresEsp;
     }
