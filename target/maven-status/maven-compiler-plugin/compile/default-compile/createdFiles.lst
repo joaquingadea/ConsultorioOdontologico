@@ -1,2 +1,9 @@
+logica\Odontologo.class
 com\mycompany\consultoriood\resources\JakartaEE8Resource.class
+logica\Turno.class
 com\mycompany\consultoriood\JakartaRestConfiguration.class
+logica\Especialidad.class
+logica\Usuario.class
+logica\Administrativo.class
+logica\Paciente.class
+logica\Persona.class

@@ -1,51 +1,24 @@
 package logica;
 
+import java.util.Date;
 import java.util.List;
 
-public class Odontologo {
-    private int id;
-    private String nombre;
-    private String apellido;
+public class Odontologo extends Persona {
+    private int id_odontologo;
+    private Usuario usuario_odontologo;
     private List<Especialidad> especialidades= null;
     private List<Turno> listaTurnos;
     private String horariosAt[];
 
-    public Odontologo() {
-    }
-
-    public Odontologo(int id, String nombre, String apellido, List<Turno> listaTurnos, String[] horariosAt) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Odontologo(int id_odontologo, Usuario usuario_odontologo, List<Turno> listaTurnos, String[] horariosAt, int id, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
+        super(id, nombre, apellido, fechaNac, telefono, dni, direccion);
+        this.id_odontologo = id_odontologo;
+        this.usuario_odontologo = usuario_odontologo;
         this.listaTurnos = listaTurnos;
         this.horariosAt = horariosAt;
     }
+
     
-    
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public List<Especialidad> getEspecialidades() {
         return especialidades;
@@ -69,6 +42,22 @@ public class Odontologo {
 
     public void setListaTurnos(List<Turno> listaTurnos) {
         this.listaTurnos = listaTurnos;
+    }
+
+    public Usuario getUsuario_odontologo() {
+        return usuario_odontologo;
+    }
+
+    public void setUsuario_odontologo(Usuario usuario_odontologo) {
+        this.usuario_odontologo = usuario_odontologo;
+    }
+
+    public int getId_odontologo() {
+        return id_odontologo;
+    }
+
+    public void setId_odontologo(int id_odontologo) {
+        this.id_odontologo = id_odontologo;
     }
     
 }
