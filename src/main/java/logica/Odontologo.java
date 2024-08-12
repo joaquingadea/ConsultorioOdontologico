@@ -6,28 +6,18 @@ import java.util.List;
 public class Odontologo extends Persona {
     private int id_odontologo;
     private Usuario usuario_odontologo;
-    private List<Especialidad> especialidades= null;
+    private Especialidad especialidad;
     private List<Turno> listaTurnos;
     private String horariosAt[];
 
-    public Odontologo(int id_odontologo, Usuario usuario_odontologo, List<Turno> listaTurnos, String[] horariosAt, int id, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
+    public Odontologo(int id_odontologo, Usuario usuario_odontologo, Especialidad especialidad, List<Turno> listaTurnos, String[] horariosAt, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
         super(nombre, apellido, fechaNac, telefono, dni, direccion);
         this.id_odontologo = id_odontologo;
         this.usuario_odontologo = usuario_odontologo;
+        this.especialidad = especialidad;
         this.listaTurnos = listaTurnos;
         this.horariosAt = horariosAt;
     }
-
-    
-
-    public List<Especialidad> getEspecialidades() {
-        return especialidades;
-    }
-
-    public void setEspecialidades(List<Especialidad> especialidades) {
-        this.especialidades = especialidades;
-    }
-
     public String[] getHorariosAt() {
         return horariosAt;
     }
@@ -58,6 +48,14 @@ public class Odontologo extends Persona {
 
     public void setId_odontologo(int id_odontologo) {
         this.id_odontologo = id_odontologo;
+    }
+
+    public Especialidad getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
     }
     
 }
