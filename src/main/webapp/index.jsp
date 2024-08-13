@@ -20,6 +20,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
+    <link rel="icon" href="icon.png"/>
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
@@ -33,7 +34,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.jsp">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-solid fa-tooth"></i>
                 </div>
@@ -43,33 +44,36 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-solid fa-bars"></i>
-                    <span>Menú</span></a>
-            </li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
+            <li class="nav-item">    
+                <div class="sidebar-heading">
+                    <i class="fas fa-solid fa-bars"></i>
+                    <span>Menú</span></a>
+                
+                </div>
+                
+            </li>
+            
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
+                
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <i class="fas fa-solid fa-tooth"></i>
+                    <span>Odontólogos</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <h6 class="collapse-header">Manejo de datos:</h6>
+                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
+                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
+                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
+                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
                     </div>
                 </div>
             </li>
@@ -78,17 +82,17 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <i class="fas fa-solid fa-users"></i>
+                    <span>Pacientes</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <h6 class="collapse-header">Manejo de datos:</h6>
+                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
+                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
+                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
+                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
                     </div>
                 </div>
             </li>
@@ -567,7 +571,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="login.jsp">Logout</a>
                 </div>
             </div>
         </div>
