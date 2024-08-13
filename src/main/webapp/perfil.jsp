@@ -1,3 +1,9 @@
+<%-- 
+    Document   : perfil
+    Created on : 13 ago. 2024, 18:01:39
+    Author     : Juan
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -6,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1></h1>
+        <h1>Hello World!</h1>
     </body>
 </html>
