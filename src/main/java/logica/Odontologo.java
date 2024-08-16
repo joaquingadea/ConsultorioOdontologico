@@ -2,6 +2,7 @@ package logica;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 public class Odontologo extends Persona {
