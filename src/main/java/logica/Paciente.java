@@ -5,18 +5,20 @@ import java.util.List;
 
 public class Paciente extends Persona{
     
-    private int id_paciente;
+    
     private boolean tiene_responsable;
     private String nombre_responsable;
     private List<Turno> lista_turnos;
 
-    public Paciente(int id_paciente, boolean tiene_responsable, String nombre_responsable, List<Turno> lista_turnos, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
-        super(nombre, apellido, fechaNac, telefono, dni, direccion);
-        this.id_paciente = id_paciente;
+
+    public Paciente(boolean tiene_responsable, String nombre_responsable, List<Turno> lista_turnos, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
+        super(id_persona, nombre, apellido, fechaNac, telefono, dni, direccion);
         this.tiene_responsable = tiene_responsable;
         this.nombre_responsable = nombre_responsable;
         this.lista_turnos = lista_turnos;
     }
+
+    
     
     public String getNombre_responsable() {
         return nombre_responsable;
@@ -24,14 +26,6 @@ public class Paciente extends Persona{
 
     public void setNombre_responsable(String nombre_responsable) {
         this.nombre_responsable = nombre_responsable;
-    }
-
-    public int getId_paciente() {
-        return id_paciente;
-    }
-
-    public void setId_paciente(int id_paciente) {
-        this.id_paciente = id_paciente;
     }
 
     public boolean isTiene_responsable() {
