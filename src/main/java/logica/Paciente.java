@@ -2,10 +2,12 @@ package logica;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.OneToMany;
 
 public class Paciente extends Persona{
     private boolean tiene_responsable;
     private String nombre_responsable;
+    @OneToMany(mappedBy = "paciente")
     private List<Turno> lista_turnos;
 
 
@@ -15,9 +17,6 @@ public class Paciente extends Persona{
         this.nombre_responsable = nombre_responsable;
         this.lista_turnos = lista_turnos;
     }
-
-    
-    
     public String getNombre_responsable() {
         return nombre_responsable;
     }
@@ -41,8 +40,5 @@ public class Paciente extends Persona{
     public void setLista_turnos(List<Turno> lista_turnos) {
         this.lista_turnos = lista_turnos;
     }
-
-    
-
 }
     

@@ -1,8 +1,10 @@
 package logica;
 
 import java.util.Date;
-
+import javax.persistence.Entity;
+@Entity
 public class Administrativo extends Persona {
+    
     private Usuario usuario_administrativo;
 
 

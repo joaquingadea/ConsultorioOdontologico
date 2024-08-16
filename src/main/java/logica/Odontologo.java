@@ -2,11 +2,14 @@ package logica;
 
 import java.util.Date;
 import java.util.List;
+import javax.persistence.OneToMany;
 
 public class Odontologo extends Persona {
 
     private Usuario usuario_odontologo;
+    @ManyToOne
     private Especialidad especialidad;
+    @OneToMany(mappedBy = "docEncargado")
     private List<Turno> listaTurnos;
     private String horariosAt[];
 
@@ -45,7 +48,6 @@ public class Odontologo extends Persona {
     public void setUsuario_odontologo(Usuario usuario_odontologo) {
         this.usuario_odontologo = usuario_odontologo;
     }
-
 
     public Especialidad getEspecialidad() {
         return especialidad;
