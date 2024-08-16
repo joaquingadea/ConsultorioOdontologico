@@ -1,8 +1,3 @@
-<%-- 
-    Document   : perfil
-    Created on : 13 ago. 2024, 18:01:39
-    Author     : Juan
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
