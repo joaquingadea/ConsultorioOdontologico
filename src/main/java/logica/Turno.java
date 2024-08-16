@@ -1,8 +1,17 @@
   package logica;
 import java.util.Date;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+@Entity
 public class Turno {
-    private int id_turno;    
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id_turno; 
+    @Temporal(TemporalType.DATE)
     private Date fecha;
     private int hora;
     private Odontologo docEncargado;

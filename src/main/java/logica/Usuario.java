@@ -1,5 +1,14 @@
 package logica;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int id_usuario;
     private String nombre_usuario;
     private String contrasenia_usuario;
