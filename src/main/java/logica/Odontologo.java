@@ -4,9 +4,10 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 public class Odontologo extends Persona {
-
+    @OneToOne(mappedBy = "nombre_usuario")
     private Usuario usuario_odontologo;
     @ManyToOne
     private Especialidad especialidad;

@@ -2,9 +2,10 @@ package logica;
 
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 @Entity
 public class Administrativo extends Persona {
-    
+    @OneToOne(mappedBy = "nombre_usuario")
     private Usuario usuario_administrativo;
 
 
