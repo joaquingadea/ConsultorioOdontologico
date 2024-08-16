@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Persona {
@@ -16,6 +18,7 @@ public class Persona {
     @Basic
     private String nombre;
     private String apellido;
+    @Temporal(TemporalType.DATE)
     private Date fechaNac;
     private String telefono;
     private String dni;
