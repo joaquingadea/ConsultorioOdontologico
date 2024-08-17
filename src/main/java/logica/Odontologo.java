@@ -1,12 +1,14 @@
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-
-public class Odontologo extends Persona {
+@Entity
+public class Odontologo extends Persona implements Serializable {
     @OneToOne(mappedBy = "nombre_usuario")
     private Usuario usuario_odontologo;
     @ManyToOne

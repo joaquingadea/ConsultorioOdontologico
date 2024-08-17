@@ -1,10 +1,12 @@
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 @Entity
-public class Administrativo extends Persona {
+public class Administrativo extends Persona implements Serializable {
+    
     @OneToOne(mappedBy = "nombre_usuario")
     private Usuario usuario_administrativo;
 

@@ -1,16 +1,16 @@
 package logica;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-
-public class Paciente extends Persona{
+@Entity
+public class Paciente extends Persona implements Serializable{
     private boolean tiene_responsable;
     private String nombre_responsable;
     @OneToMany(mappedBy = "paciente")
     private List<Turno> lista_turnos;
-
-
     public Paciente(boolean tiene_responsable, String nombre_responsable, List<Turno> lista_turnos, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
         super(id_persona, nombre, apellido, fechaNac, telefono, dni, direccion);
         this.tiene_responsable = tiene_responsable;
