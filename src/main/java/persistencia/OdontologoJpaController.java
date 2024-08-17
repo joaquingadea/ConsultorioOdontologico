@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import logica.Odontologo;
 import persistencia.exceptions.NonexistentEntityException;
 
@@ -27,6 +28,9 @@ public class OdontologoJpaController implements Serializable {
 
     public OdontologoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
+    }
+    public OdontologoJpaController() {
+       emf = Persistence.createEntityManagerFactory("ConsultorioPU");
     }
     private EntityManagerFactory emf = null;
 

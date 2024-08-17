@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package persistencia;
 
 import java.io.Serializable;
@@ -10,20 +7,20 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.Administrativo;
 import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
-/**
- *
- * @author Juan
- */
 public class AdministrativoJpaController implements Serializable {
 
     public AdministrativoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
+    }
+    public AdministrativoJpaController() {
+       emf = Persistence.createEntityManagerFactory("ConsultorioPU");
     }
     private EntityManagerFactory emf = null;
 

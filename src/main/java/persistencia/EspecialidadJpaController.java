@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package persistencia;
 
 import java.io.Serializable;
@@ -14,17 +11,17 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import logica.Especialidad;
 import persistencia.exceptions.NonexistentEntityException;
 
-/**
- *
- * @author Juan
- */
 public class EspecialidadJpaController implements Serializable {
 
     public EspecialidadJpaController(EntityManagerFactory emf) {
         this.emf = emf;
+    }
+    public EspecialidadJpaController() {
+       emf = Persistence.createEntityManagerFactory("ConsultorioPU");
     }
     private EntityManagerFactory emf = null;
 
