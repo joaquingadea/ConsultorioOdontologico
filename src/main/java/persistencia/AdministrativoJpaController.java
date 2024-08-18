@@ -11,7 +11,6 @@ import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.Administrativo;
-import logica.Usuario;
 import persistencia.exceptions.NonexistentEntityException;
 
 public class AdministrativoJpaController implements Serializable {
@@ -19,11 +18,12 @@ public class AdministrativoJpaController implements Serializable {
     public AdministrativoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    public AdministrativoJpaController() {
-       emf = Persistence.createEntityManagerFactory("ConsultorioPU");
-    }
     private EntityManagerFactory emf = null;
-
+    
+    public AdministrativoJpaController() {
+        emf = Persistence.createEntityManagerFactory("ConsultorioPU");
+    }
+    
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
@@ -33,16 +33,7 @@ public class AdministrativoJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Usuario usuario_administrativo = administrativo.getUsuario_administrativo();
-            if (usuario_administrativo != null) {
-                usuario_administrativo = em.getReference(usuario_administrativo.getClass(), usuario_administrativo.getId_usuario());
-                administrativo.setUsuario_administrativo(usuario_administrativo);
-            }
             em.persist(administrativo);
-            if (usuario_administrativo != null) {
-                usuario_administrativo.getNombre_usuario().add(administrativo);
-                usuario_administrativo = em.merge(usuario_administrativo);
-            }
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -56,22 +47,7 @@ public class AdministrativoJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Administrativo persistentAdministrativo = em.find(Administrativo.class, administrativo.getId_persona());
-            Usuario usuario_administrativoOld = persistentAdministrativo.getUsuario_administrativo();
-            Usuario usuario_administrativoNew = administrativo.getUsuario_administrativo();
-            if (usuario_administrativoNew != null) {
-                usuario_administrativoNew = em.getReference(usuario_administrativoNew.getClass(), usuario_administrativoNew.getId_usuario());
-                administrativo.setUsuario_administrativo(usuario_administrativoNew);
-            }
             administrativo = em.merge(administrativo);
-            if (usuario_administrativoOld != null && !usuario_administrativoOld.equals(usuario_administrativoNew)) {
-                usuario_administrativoOld.getNombre_usuario().remove(administrativo);
-                usuario_administrativoOld = em.merge(usuario_administrativoOld);
-            }
-            if (usuario_administrativoNew != null && !usuario_administrativoNew.equals(usuario_administrativoOld)) {
-                usuario_administrativoNew.getNombre_usuario().add(administrativo);
-                usuario_administrativoNew = em.merge(usuario_administrativoNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -100,11 +76,6 @@ public class AdministrativoJpaController implements Serializable {
                 administrativo.getId_persona();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The administrativo with id " + id + " no longer exists.", enfe);
-            }
-            Usuario usuario_administrativo = administrativo.getUsuario_administrativo();
-            if (usuario_administrativo != null) {
-                usuario_administrativo.getNombre_usuario().remove(administrativo);
-                usuario_administrativo = em.merge(usuario_administrativo);
             }
             em.remove(administrativo);
             em.getTransaction().commit();

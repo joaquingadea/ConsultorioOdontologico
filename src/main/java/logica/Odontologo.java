@@ -9,23 +9,22 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 @Entity
 public class Odontologo extends Persona implements Serializable {
-    @OneToOne(mappedBy = "nombre_usuario")
-    private Usuario usuario_odontologo;
+    @OneToOne
+    private Usuario usuario;
     @ManyToOne
     private Especialidad especialidad;
     @OneToMany(mappedBy = "docEncargado")
     private List<Turno> listaTurnos;
     private String horariosAt[];
 
-
-
-    public Odontologo(Usuario usuario_odontologo, Especialidad especialidad, List<Turno> listaTurnos, String[] horariosAt, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
+    public Odontologo(Usuario usuario, Especialidad especialidad, List<Turno> listaTurnos, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
         super(id_persona, nombre, apellido, fechaNac, telefono, dni, direccion);
-        this.usuario_odontologo = usuario_odontologo;
+        this.usuario = usuario;
         this.especialidad = especialidad;
         this.listaTurnos = listaTurnos;
-        this.horariosAt = horariosAt;
     }
+
+
 
     
     
@@ -45,13 +44,7 @@ public class Odontologo extends Persona implements Serializable {
         this.listaTurnos = listaTurnos;
     }
 
-    public Usuario getUsuario_odontologo() {
-        return usuario_odontologo;
-    }
-
-    public void setUsuario_odontologo(Usuario usuario_odontologo) {
-        this.usuario_odontologo = usuario_odontologo;
-    }
+    
 
     public Especialidad getEspecialidad() {
         return especialidad;
@@ -59,6 +52,14 @@ public class Odontologo extends Persona implements Serializable {
 
     public void setEspecialidad(Especialidad especialidad) {
         this.especialidad = especialidad;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
     
 }

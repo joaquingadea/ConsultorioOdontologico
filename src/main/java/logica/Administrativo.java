@@ -7,23 +7,20 @@ import javax.persistence.OneToOne;
 @Entity
 public class Administrativo extends Persona implements Serializable {
     
-    @OneToOne(mappedBy = "nombre_usuario")
-    private Usuario usuario_administrativo;
+    @OneToOne
+    private Usuario usuario;
 
-
-    public Administrativo(Usuario usuario_administrativo, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
+    public Administrativo(Usuario usuario, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
         super(id_persona, nombre, apellido, fechaNac, telefono, dni, direccion);
-        this.usuario_administrativo = usuario_administrativo;
-    }
-    
-
-    public Usuario getUsuario_administrativo() {
-        return usuario_administrativo;
+        this.usuario = usuario;
     }
 
-    public void setUsuario_administrativo(Usuario usuario_administrativo) {
-        this.usuario_administrativo = usuario_administrativo;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
     
 }

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package persistencia;
 
 import java.io.Serializable;
@@ -9,7 +6,6 @@ import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import logica.Usuario;
 import logica.Especialidad;
 import logica.Turno;
 import java.util.ArrayList;
@@ -20,20 +16,18 @@ import javax.persistence.Persistence;
 import logica.Odontologo;
 import persistencia.exceptions.NonexistentEntityException;
 
-/**
- *
- * @author Juan
- */
 public class OdontologoJpaController implements Serializable {
 
     public OdontologoJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    public OdontologoJpaController() {
-       emf = Persistence.createEntityManagerFactory("ConsultorioPU");
-    }
     private EntityManagerFactory emf = null;
-
+    
+    
+    public OdontologoJpaController() {
+        emf = Persistence.createEntityManagerFactory("ConsultorioPU");
+    }
+    
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
@@ -46,11 +40,6 @@ public class OdontologoJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Usuario usuario_odontologo = odontologo.getUsuario_odontologo();
-            if (usuario_odontologo != null) {
-                usuario_odontologo = em.getReference(usuario_odontologo.getClass(), usuario_odontologo.getId_usuario());
-                odontologo.setUsuario_odontologo(usuario_odontologo);
-            }
             Especialidad especialidad = odontologo.getEspecialidad();
             if (especialidad != null) {
                 especialidad = em.getReference(especialidad.getClass(), especialidad.getId_especialidad());
@@ -63,10 +52,6 @@ public class OdontologoJpaController implements Serializable {
             }
             odontologo.setListaTurnos(attachedListaTurnos);
             em.persist(odontologo);
-            if (usuario_odontologo != null) {
-                usuario_odontologo.getNombre_usuario().add(odontologo);
-                usuario_odontologo = em.merge(usuario_odontologo);
-            }
             if (especialidad != null) {
                 especialidad.getDoctoresEsp().add(odontologo);
                 especialidad = em.merge(especialidad);
@@ -94,16 +79,10 @@ public class OdontologoJpaController implements Serializable {
             em = getEntityManager();
             em.getTransaction().begin();
             Odontologo persistentOdontologo = em.find(Odontologo.class, odontologo.getId_persona());
-            Usuario usuario_odontologoOld = persistentOdontologo.getUsuario_odontologo();
-            Usuario usuario_odontologoNew = odontologo.getUsuario_odontologo();
             Especialidad especialidadOld = persistentOdontologo.getEspecialidad();
             Especialidad especialidadNew = odontologo.getEspecialidad();
             List<Turno> listaTurnosOld = persistentOdontologo.getListaTurnos();
             List<Turno> listaTurnosNew = odontologo.getListaTurnos();
-            if (usuario_odontologoNew != null) {
-                usuario_odontologoNew = em.getReference(usuario_odontologoNew.getClass(), usuario_odontologoNew.getId_usuario());
-                odontologo.setUsuario_odontologo(usuario_odontologoNew);
-            }
             if (especialidadNew != null) {
                 especialidadNew = em.getReference(especialidadNew.getClass(), especialidadNew.getId_especialidad());
                 odontologo.setEspecialidad(especialidadNew);
@@ -116,14 +95,6 @@ public class OdontologoJpaController implements Serializable {
             listaTurnosNew = attachedListaTurnosNew;
             odontologo.setListaTurnos(listaTurnosNew);
             odontologo = em.merge(odontologo);
-            if (usuario_odontologoOld != null && !usuario_odontologoOld.equals(usuario_odontologoNew)) {
-                usuario_odontologoOld.getNombre_usuario().remove(odontologo);
-                usuario_odontologoOld = em.merge(usuario_odontologoOld);
-            }
-            if (usuario_odontologoNew != null && !usuario_odontologoNew.equals(usuario_odontologoOld)) {
-                usuario_odontologoNew.getNombre_usuario().add(odontologo);
-                usuario_odontologoNew = em.merge(usuario_odontologoNew);
-            }
             if (especialidadOld != null && !especialidadOld.equals(especialidadNew)) {
                 especialidadOld.getDoctoresEsp().remove(odontologo);
                 especialidadOld = em.merge(especialidadOld);
@@ -177,11 +148,6 @@ public class OdontologoJpaController implements Serializable {
                 odontologo.getId_persona();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The odontologo with id " + id + " no longer exists.", enfe);
-            }
-            Usuario usuario_odontologo = odontologo.getUsuario_odontologo();
-            if (usuario_odontologo != null) {
-                usuario_odontologo.getNombre_usuario().remove(odontologo);
-                usuario_odontologo = em.merge(usuario_odontologo);
             }
             Especialidad especialidad = odontologo.getEspecialidad();
             if (especialidad != null) {

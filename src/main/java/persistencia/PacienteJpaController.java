@@ -20,11 +20,12 @@ public class PacienteJpaController implements Serializable {
     public PacienteJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    public PacienteJpaController() {
-       emf = Persistence.createEntityManagerFactory("ConsultorioPU");
-    }
     private EntityManagerFactory emf = null;
-
+    
+    public PacienteJpaController() {
+        emf = Persistence.createEntityManagerFactory("ConsultorioPU");
+    }
+    
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }

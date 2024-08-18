@@ -1,6 +1,7 @@
 package logica;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,16 +12,14 @@ public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id_usuario;
-    private String nombre_usuario;
+    private String usuario;
     private String contrasenia_usuario;
-
-    public Usuario(int id_usuario, String nombre_usuario, String contrasenia_usuario) {
+    
+    public Usuario(int id_usuario, String usuario, String contrasenia_usuario) {
         this.id_usuario = id_usuario;
-        this.nombre_usuario = nombre_usuario;
+        this.usuario = usuario;
         this.contrasenia_usuario = contrasenia_usuario;
     }
-    
-    
     
     public String getContrasenia_usuario() {
         return contrasenia_usuario;
@@ -30,13 +29,6 @@ public class Usuario implements Serializable {
         this.contrasenia_usuario = contrasenia_usuario;
     }
 
-    public String getNombre_usuario() {
-        return nombre_usuario;
-    }
-
-    public void setNombre_usuario(String nombre_usuario) {
-        this.nombre_usuario = nombre_usuario;
-    }
 
     public int getId_usuario() {
         return id_usuario;
@@ -44,6 +36,14 @@ public class Usuario implements Serializable {
 
     public void setId_usuario(int id_usuario) {
         this.id_usuario = id_usuario;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
     
 }
