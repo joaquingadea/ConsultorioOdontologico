@@ -34,15 +34,15 @@
                         </label>
                     </div>
                     <div>
-                        <label >
+                        <label>
                             <i class='bx bx-envelope' ></i>
-                            <input type="email" placeholder="Correo Electronico" name="userEmail" >
+                            <input type="email" placeholder="Correo Electronico" name="usuario_email" >
                         </label>
                     </div>
                    <div>
                         <label>
                             <i class='bx bx-lock-alt' ></i>
-                            <input type="password" placeholder="Contraseña" name="userPassword">
+                            <input type="password" placeholder="Contraseña" name="usuario_contraseña">
                         </label>
                    </div>
                    
