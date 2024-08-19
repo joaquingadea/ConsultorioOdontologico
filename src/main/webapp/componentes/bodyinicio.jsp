@@ -42,7 +42,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manejo de datos:</h6>
                         <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
-                        <a class="collapse-item" href="cards.html">Nuevo Odontólogo</a>
+                        <a class="collapse-item" href="altaodontologo.jsp">Nuevo Odontólogo</a>
                     </div>
                 </div>
             </li>
@@ -85,7 +85,7 @@
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
-            <div id="content">
+            <div ><!-- id="content" -->
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                                         <!-- Sidebar Toggle (Topbar) -->
