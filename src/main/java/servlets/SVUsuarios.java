@@ -3,12 +3,14 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import logica.ControladoraLogica;
+import logica.Usuario;
 
 
 @WebServlet(name = "SVUsuarios", urlPatterns = {"/SVUsuarios"})
@@ -32,8 +34,15 @@ public class SVUsuarios extends HttpServlet {
         
         String usuario = request.getParameter("usuario");
         String contrasenia = request.getParameter("usuario_contraseña");
-        String correo = request.getParameter("usuario_email");
+        String contrasenia_conf = request.getParameter("usuario_contraseña-confirmacion");
         
+        List<Usuario> lista_usuarios = control.traerUsuarios();
+        
+        /*for(Usuario usu : lista_usuarios){
+            if(usu.getUsuario() == usuario){
+                alert();
+            }
+        }*/
     }
 
     @Override

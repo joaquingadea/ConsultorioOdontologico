@@ -7,7 +7,9 @@ D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\Administ
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\TurnoJpaController.java
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\logica\Persona.java
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\exceptions\NonexistentEntityException.java
+D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\servlets\SVUsuarios.java
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\exceptions\PreexistingEntityException.java
+D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\ControladoraPersistencia.java
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\com\mycompany\consultoriood\JakartaRestConfiguration.java
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\logica\Turno.java
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\OdontologoJpaController.java
@@ -17,3 +19,4 @@ D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\Paciente
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\UsuarioJpaController.java
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\logica\Usuario.java
 D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\persistencia\EspecialidadJpaController.java
+D:\Documentos\NetBeansProjects\ConsultorioOd\src\main\java\logica\ControladoraLogica.java

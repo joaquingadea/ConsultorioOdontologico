@@ -36,20 +36,21 @@
                     <div>
                         <label>
                             <i class='bx bx-envelope' ></i>
-                            <input type="email" placeholder="Correo Electronico" name="usuario_email" >
+                            <input type="password" placeholder="Constraseña" name="usuario_constraseña" >
                         </label>
                     </div>
                    <div>
                         <label>
                             <i class='bx bx-lock-alt' ></i>
-                            <input type="password" placeholder="Contraseña" name="usuario_contraseña">
+                            <input type="password" placeholder="Confirmacion contraseña" name="usuario_contraseña-confirmacion">
                         </label>
                    </div>
                    
-                    <input type="submit" value="Registrarse">
+                      
                     <div class="alerta-error">Todos los campos son obligatorios</div>
                     <div class="alerta-exito">Te registraste correctamente</div>
                 </form>
+                <button class="boton-form" type="submit">Registrarse</button>
             </div>
         </div>
     </div>
