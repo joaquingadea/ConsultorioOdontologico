@@ -32,17 +32,37 @@ public class SVUsuarios extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        String usuario = request.getParameter("usuario");
-        String contrasenia = request.getParameter("usuario_contraseña");
-        String contrasenia_conf = request.getParameter("usuario_contraseña-confirmacion");
-        
+        String usuario = request.getParameter("usuario_registro");
+        String contrasenia = request.getParameter("contrasenia_registro");
+        String contrasenia_conf = request.getParameter("contrasenia-confirmacion");
+        String rol = request.getParameter("rol_registro");
         List<Usuario> lista_usuarios = control.traerUsuarios();
         
-        /*for(Usuario usu : lista_usuarios){
+        /*
+            boolean ok = true;
+        for(Usuario usu : lista_usuarios){
+            if(ok == true){
             if(usu.getUsuario() == usuario){
-                alert();
+                alert("usuario ya utilizado, porfavor utilice otro usuario sin registrar");
+                break;
             }
-        }*/
+            if(contrasenia != contrasenia_conf){
+                alert("Error al confirmar la contraseña");
+                break;
+            }
+            if(rol != "Odontologo" || rol != "Administrativo"){
+                alert("el rol no existe")
+                break;
+            }
+            }
+        }
+        */
+        Usuario nuevoUsu = new Usuario();
+        nuevoUsu.setUsuario(usuario);
+        nuevoUsu.setContrasenia_usuario(contrasenia);
+        nuevoUsu.setRol(rol);
+        control.crearUsuario(nuevoUsu);
+        response.sendRedirect("login.jsp");
     }
 
     @Override

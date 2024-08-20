@@ -17,6 +17,11 @@ public class Odontologo extends Persona implements Serializable {
     private List<Turno> listaTurnos;
     private String horariosAt[];
 
+    public Odontologo() {
+    }
+    
+    
+    
     public Odontologo(Usuario usuario, Especialidad especialidad, List<Turno> listaTurnos, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
         super(id_persona, nombre, apellido, fechaNac, telefono, dni, direccion);
         this.usuario = usuario;

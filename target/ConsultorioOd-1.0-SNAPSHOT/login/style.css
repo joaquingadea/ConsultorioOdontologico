@@ -138,7 +138,19 @@ body {
 .form label i {
   color: #a7a7a7;
 }
-
+.boton-form{
+  background-color: #9191bd;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+.boton-form:hover{
+  background-color: #7a7a9a;
+}
 .form input[type="submit"] {
   background-color: #9191bd;
   color: #fff;

@@ -21,30 +21,40 @@
                                     </div>
                                     <form class="user">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                            <input type="text" name="nombreOd" class="form-control form-control-user"
+                                                 
                                                 placeholder="Nombre...">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                            <input type="text" name="apellidoOd" class="form-control form-control-user"
+                                                 
                                                 placeholder="Apellido...">
                                         </div>
                                         <div class="form-group">
                                             <h5 class="h6 text-gray-900 mb-4" >Fecha de nacimiento:</h5>
-                                            <input placeholder="Fecha de nacimiento..."type="date" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                            <input name="fechaOd" placeholder="Fecha de nacimiento..."type="date" class="form-control form-control-user"
+                                                 
                                                 >
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                name="dniOd"
                                                 placeholder="Dni...">
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                name="telefonoOd" 
                                                 placeholder="Telefono...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user"
+                                                name="direccionOd"
+                                                placeholder="Dirección...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user"
+                                                name="especialidadOd"
+                                                placeholder="Especialidad...">
                                         </div>
                                         
                                         <button type="submit" class="btn btn-primary btn-user btn-block">

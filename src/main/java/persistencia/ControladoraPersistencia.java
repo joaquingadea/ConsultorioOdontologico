@@ -8,5 +8,9 @@ public class ControladoraPersistencia {
     public List<Usuario> traerUsuarios() {
         return usuarioJpa.findUsuarioEntities();
     }
+
+    public void crearUsuario(Usuario nuevoUsu) {
+        usuarioJpa.create(nuevoUsu);
+    }
     
 }

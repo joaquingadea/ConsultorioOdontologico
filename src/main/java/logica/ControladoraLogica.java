@@ -8,5 +8,9 @@ public class ControladoraLogica {
     public List<Usuario> traerUsuarios() {
       return controlP.traerUsuarios();  
     }
+
+    public void crearUsuario(Usuario nuevoUsu) {
+        controlP.crearUsuario(nuevoUsu);
+    }
     
 }
