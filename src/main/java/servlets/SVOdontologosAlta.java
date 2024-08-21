@@ -6,82 +6,54 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logica.ControladoraLogica;
+import logica.Odontologo;
 
-/**
- *
- * @author Juan
- */
+
 @WebServlet(name = "SVOdontologosAlta", urlPatterns = {"/SVOdontologosAlta"})
 public class SVOdontologosAlta extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    ControladoraLogica control = new ControladoraLogica();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet SVOdontologosAlta</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet SVOdontologosAlta at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        String nombreOd = request.getParameter("nombreOd");
+        String apellidoOd = request.getParameter("apellidoOd");
+        String dniOd = request.getParameter("dniOd");
+        //Date fechaOd =  request.getParameter("fechaOd");
+        String telefonoOd = request.getParameter("telefonoOd");
+        String direccionOd = request.getParameter("direccionOd");
+        //String especialidadOd = request.getParameter("especialidadOd");
+        
+        Odontologo nuevoOd = new Odontologo();
+        nuevoOd.setNombre(nombreOd);
+        nuevoOd.setApellido(apellidoOd);
+        nuevoOd.setDni(dniOd);
+        //nuevoOd.setFechaNac(fechaOd);
+        nuevoOd.setDireccion(direccionOd);
+        nuevoOd.setTelefono(telefonoOd);
+        control.crearOdontologo(nuevoOd);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    }
 
 }

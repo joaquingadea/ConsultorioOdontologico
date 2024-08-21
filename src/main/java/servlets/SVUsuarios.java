@@ -24,7 +24,7 @@ public class SVUsuarios extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        processRequest(request, response);   
     }
 
     @Override
@@ -39,6 +39,7 @@ public class SVUsuarios extends HttpServlet {
         List<Usuario> lista_usuarios = control.traerUsuarios();
         
         /*
+            ERRORES POSIBLES
             boolean ok = true;
         for(Usuario usu : lista_usuarios){
             if(ok == true){

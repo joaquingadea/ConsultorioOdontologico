@@ -2,5 +2,4 @@
 <%@include file="./componentes/head.jsp" %>
 <%@include file="./componentes/bodyinicio.jsp"  %>
 
-
 <%@include file="./componentes/bodyfinal.jsp"  %>

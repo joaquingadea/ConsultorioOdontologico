@@ -19,7 +19,7 @@
                                     <div class="text-center">
                                         <h4 class="h5 text-gray-900 mb-4">Escribe los datos del nuevo odontólogo:</h4>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" action="SVOdontologosAlta" method="POST">
                                         <div class="form-group">
                                             <input type="text" name="nombreOd" class="form-control form-control-user"
                                                  

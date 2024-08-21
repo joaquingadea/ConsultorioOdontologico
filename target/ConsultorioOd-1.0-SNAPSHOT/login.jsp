@@ -73,10 +73,10 @@
             <div class="form-information-childs">
                 <h2>Iniciar Sesión</h2>
                 <p>Inicia Sesión con tu cuenta</p>
-                <form class="form form-login" method="POST" action="SVUsuarios" novalidate>
+                <form class="form form-login" method="GET" action="SVUsuarios" novalidate>
                     <div>
                         <label >
-                            <i class='bx bx-envelope' ></i>
+                            <i class='bx bx-user' ></i>
                             <input type="text" placeholder="Usuario" name="usuario_inicio">
                         </label>
                     </div>

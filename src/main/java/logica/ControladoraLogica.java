@@ -5,6 +5,7 @@ import persistencia.ControladoraPersistencia;
 
 public class ControladoraLogica {
     ControladoraPersistencia controlP = new ControladoraPersistencia();
+    
     public List<Usuario> traerUsuarios() {
       return controlP.traerUsuarios();  
     }
@@ -13,4 +14,12 @@ public class ControladoraLogica {
         controlP.crearUsuario(nuevoUsu);
     }
     
+    
+    public List<Odontologo> traerOdontologos(){
+       return controlP.traerOdontologos(); 
+    }
+
+    public void crearOdontologo(Odontologo nuevoOd) {
+        controlP.crearOdontologo(nuevoOd);
+    }
 }
