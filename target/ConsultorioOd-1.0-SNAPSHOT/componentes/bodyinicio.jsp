@@ -41,7 +41,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manejo de datos:</h6>
-                        <a class="collapse-item" href="buttons.html">Ver Odontólogos</a>
+                        <a class="collapse-item" href="verodontologos.jsp">Ver Odontólogos</a>
                         <a class="collapse-item" href="altaodontologo.jsp">Nuevo Odontólogo</a>
                     </div>
                 </div>
