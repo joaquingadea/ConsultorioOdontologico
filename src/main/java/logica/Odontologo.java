@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -20,19 +21,13 @@ public class Odontologo extends Persona implements Serializable {
     public Odontologo() {
     }
     
-    
-    
-    public Odontologo(Usuario usuario, Especialidad especialidad, List<Turno> listaTurnos, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
+    public Odontologo(Usuario usuario, Especialidad especialidad, List<Turno> listaTurnos, String[] horariosAt, int id_persona, String nombre, String apellido, Date fechaNac, String telefono, String dni, String direccion) {
         super(id_persona, nombre, apellido, fechaNac, telefono, dni, direccion);
         this.usuario = usuario;
         this.especialidad = especialidad;
         this.listaTurnos = listaTurnos;
+        this.horariosAt = horariosAt;
     }
-
-
-
-    
-    
     public String[] getHorariosAt() {
         return horariosAt;
     }

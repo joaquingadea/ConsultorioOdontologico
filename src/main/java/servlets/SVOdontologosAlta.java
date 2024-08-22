@@ -18,7 +18,9 @@ import logica.Odontologo;
 
 @WebServlet(name = "SVOdontologosAlta", urlPatterns = {"/SVOdontologosAlta"})
 public class SVOdontologosAlta extends HttpServlet {
+    
     ControladoraLogica control = new ControladoraLogica();
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -26,7 +28,7 @@ public class SVOdontologosAlta extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+      
     }
 
     @Override
@@ -49,6 +51,7 @@ public class SVOdontologosAlta extends HttpServlet {
         nuevoOd.setDireccion(direccionOd);
         nuevoOd.setTelefono(telefonoOd);
         control.crearOdontologo(nuevoOd);
+        response.sendRedirect("altaodontologo.jsp");
     }
 
     @Override
