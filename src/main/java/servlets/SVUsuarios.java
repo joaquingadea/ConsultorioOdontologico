@@ -36,7 +36,7 @@ public class SVUsuarios extends HttpServlet {
         String contrasenia = request.getParameter("contrasenia_registro");
         String contrasenia_conf = request.getParameter("contrasenia-confirmacion");
         String rol = request.getParameter("rol_registro");
-        List<Usuario> lista_usuarios = control.traerUsuarios();
+        //List<Usuario> lista_usuarios = control.traerUsuarios();
         
         /*
             ERRORES POSIBLES

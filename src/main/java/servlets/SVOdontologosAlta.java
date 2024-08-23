@@ -4,14 +4,17 @@
  */
 package servlets;
 
+import java.util.List;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.ControladoraLogica;
 import logica.Odontologo;
 
@@ -28,7 +31,11 @@ public class SVOdontologosAlta extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
+        List<Odontologo> listaOdontologos = new ArrayList<Odontologo>();
+        listaOdontologos = control.traerOdontologos();
+        HttpSession misession = request.getSession();
+        misession.setAttribute("listaOdontologos", listaOdontologos);
+        response.sendRedirect("verodontologos.jsp");
     }
 
     @Override
