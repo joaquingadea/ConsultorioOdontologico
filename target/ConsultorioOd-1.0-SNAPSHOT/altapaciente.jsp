@@ -51,11 +51,6 @@
                                                 name="direccionPac"
                                                 placeholder="Dirección...">
                                         </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                name="especialidadOd"
-                                                placeholder="Especialidad...">
-                                        </div>
                                         
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Guardar paciente

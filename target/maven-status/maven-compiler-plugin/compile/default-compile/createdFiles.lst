@@ -2,7 +2,10 @@ com\mycompany\consultoriood\JakartaRestConfiguration.class
 logica\Odontologo_.class
 logica\Usuario.class
 persistencia\EspecialidadJpaController.class
+servlets\SVEditarOdontologos.class
+servlets\SVElimOdontologos.class
 logica\Persona.class
+servlets\SVPacientes.class
 logica\Turno.class
 persistencia\UsuarioJpaController.class
 servlets\SVOdontologosAlta.class

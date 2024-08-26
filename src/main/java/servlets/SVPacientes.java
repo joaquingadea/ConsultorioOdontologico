@@ -1,11 +1,13 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.ControladoraLogica;
 import logica.Paciente;
 
@@ -19,13 +21,15 @@ public class SVPacientes extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        HttpSession misesion = request.getSession();
+        List<Paciente> listaPacientes = control.traerPacientes();
+        misesion.setAttribute("listaPacientes", listaPacientes);
+        response.sendRedirect("verpacientes.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
         String nombrePac = request.getParameter("nombrePac");
         String apellidoPac = request.getParameter("apellidoPac");
         String dniPac = request.getParameter("dniPac");

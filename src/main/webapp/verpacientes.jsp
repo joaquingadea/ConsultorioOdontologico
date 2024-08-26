@@ -38,11 +38,11 @@
                                             <th>Telefono</th>
                                         </tr>
                                     </tfoot>
-                                    <%List<Odontologo> listaPacientes = (List) request.getSession().getAttribute("listaPacientes");%>
+                                    <%List<Paciente> listaPacientes = (List) request.getSession().getAttribute("listaPacientes");%>
                                         
                                         <tbody>
                                             <%
-                                        for(Paciente paciente : listaPacientes){%>
+                                        for(Paciente paciente : listaPacientes){ %>
                                             <tr>
                                             <td><%=paciente.getId_persona()%></td>
                                             <td><%=paciente.getNombre()%></td>

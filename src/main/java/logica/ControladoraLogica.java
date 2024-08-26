@@ -26,4 +26,8 @@ public class ControladoraLogica {
     public void crearPaciente(Paciente nuevoPac) {
         controlP.crearPaciente(nuevoPac);
     }
+
+    public List<Paciente> traerPacientes() {
+        return controlP.traerPacientes();
+    }
 }

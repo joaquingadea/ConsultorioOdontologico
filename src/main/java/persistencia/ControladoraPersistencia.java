@@ -32,5 +32,9 @@ public class ControladoraPersistencia {
     public void crearPaciente(Paciente nuevoPac) {
         pacienteJpa.create(nuevoPac);
     }
+
+    public List<Paciente> traerPacientes() {
+        return pacienteJpa.findPacienteEntities();
+    }
     
 }
