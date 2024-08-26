@@ -6,7 +6,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import logica.Odontologo;
 
-@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-08-22T19:39:12")
+@Generated(value="EclipseLink-2.7.10.v20211216-rNA", date="2024-08-26T11:11:52")
 @StaticMetamodel(Especialidad.class)
 public class Especialidad_ { 
 
