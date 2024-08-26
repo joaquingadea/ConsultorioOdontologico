@@ -1,4 +1,5 @@
 
+<%@page import="logica.Paciente"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="logica.Odontologo"%>
 <%@page import="java.util.List"%>
@@ -10,7 +11,7 @@
     <div class="card shadow mb-4">
                         
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"> Odontólogos registrados en el sistema </h6>
+                            <h6 class="m-0 font-weight-bold text-primary"> Pacientes registrados en el sistema </h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -37,19 +38,19 @@
                                             <th>Telefono</th>
                                         </tr>
                                     </tfoot>
-                                    <%List<Odontologo> listaOd = (List) request.getSession().getAttribute("listaOdontologos");%>
+                                    <%List<Odontologo> listaPacientes = (List) request.getSession().getAttribute("listaPacientes");%>
                                         
                                         <tbody>
                                             <%
-                                        for(Odontologo od : listaOd){%>
+                                        for(Paciente paciente : listaPacientes){%>
                                             <tr>
-                                            <td><%=od.getId_persona()%></td>
-                                            <td><%=od.getNombre()%></td>
-                                            <td><%=od.getApellido()%></td>
-                                            <td><%=od.getDni()%></td>
-                                            <td><%=od.getFechaNac()%></td>
-                                            <td><%=od.getDireccion()%></td>
-                                            <td><%=od.getTelefono()%></td>
+                                            <td><%=paciente.getId_persona()%></td>
+                                            <td><%=paciente.getNombre()%></td>
+                                            <td><%=paciente.getApellido()%></td>
+                                            <td><%=paciente.getDni()%></td>
+                                            <td><%=paciente.getFechaNac()%></td>
+                                            <td><%=paciente.getDireccion()%></td>
+                                            <td><%=paciente.getTelefono()%></td>
                                             </tr> <%};%>
                                         </tbody>
                                         

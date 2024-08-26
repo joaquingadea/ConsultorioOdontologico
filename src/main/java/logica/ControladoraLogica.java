@@ -22,4 +22,8 @@ public class ControladoraLogica {
     public void crearOdontologo(Odontologo nuevoOd) {
         controlP.crearOdontologo(nuevoOd);
     }
+
+    public void crearPaciente(Paciente nuevoPac) {
+        controlP.crearPaciente(nuevoPac);
+    }
 }
