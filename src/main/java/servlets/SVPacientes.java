@@ -45,6 +45,8 @@ public class SVPacientes extends HttpServlet {
         nuevoPac.setDireccion(direccionPac);
         
         control.crearPaciente(nuevoPac);
+        
+        response.sendRedirect("altapaciente.jsp");
     }
 
     @Override
