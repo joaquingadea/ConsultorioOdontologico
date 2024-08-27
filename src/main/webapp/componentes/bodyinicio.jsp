@@ -43,6 +43,8 @@
                         <h6 class="collapse-header">Manejo de datos:</h6>
                         <a class="collapse-item" href="SVOdontologosAlta">Ver Odontólogos</a>
                         <a class="collapse-item" href="altaodontologo.jsp">Nuevo Odontólogo</a>
+                        <a class="collapse-item" href="edicionodontologos.jsp">Edición de Odontólogos</a>
+                        
                     </div>
                 </div>
             </li>
