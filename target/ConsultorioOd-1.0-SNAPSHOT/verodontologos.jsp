@@ -8,18 +8,33 @@
 <%@include file="./componentes/bodyinicio.jsp"  %>
 
                         <div class="content">
-                            <div class="container-fluid mb-3 ">
-                                <div class="row justify-content-center">
-                                    <div class="col-xl-10">
-                                        <div class="card shadow h-100">
+                            <div class="container-fluid mb-4 ">
+                                <div class="row justify-content-center ">
+                                    <div class="mb-1 col-xl-4 col-sm-6 col-l-6 ">
+                                        <div class="card shadow h-100 ">
                                             <div class="card-body text-center">
-                                                <form class="user m-auto" action="SVElimOdontologos" method="GET" >
-                                                    <div class="form-group">
-                                                        <p class="m-0 font-weight-bold text-primary">Id para la edicion de odontologos:</p><br>
-                                                        <input type="text" name="nombreOd" class="form-control form-control-user" placeholder="Nombre...">
+                                                <form class="user" action="SVElimOdontologos" method="GET" >
+                                                    <div class="form-group ">
+                                                        <p class="m-0 font-weight-bold text-primary">Pon el ID del odontólogo que quieres <span class="text-warning">EDITAR</span>:</p><br>
+                                                        <input type="text" name="idOdEdicion" class="form-control form-control-user" placeholder="ID...">
                                                     </div>
-                                                    <button type="submit">
-                                                        Enviar
+                                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                        Editar
+                                                    </button>
+                                                </form>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="mb-1 col-xl-4 col-sm-6 col-l-6">
+                                        <div class="card shadow h-100 ">
+                                            <div class="card-body text-center">
+                                                <form class="user" action="SVElimOdontologos" method="GET" >
+                                                    <div class="form-group ">
+                                                        <p class="m-0 font-weight-bold text-primary">Pon el ID del odontólogo que quieres <span class="text-danger">ELIMINAR</span>:</p><br>
+                                                        <input type="text" name="idOdEliminacion" class="form-control form-control-user" placeholder="ID...">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                        Eliminar
                                                     </button>
                                                 </form>
                                             </div> 
