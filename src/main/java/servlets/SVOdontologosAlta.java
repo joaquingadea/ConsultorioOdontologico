@@ -41,7 +41,6 @@ public class SVOdontologosAlta extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
         String nombreOd = request.getParameter("nombreOd");
         String apellidoOd = request.getParameter("apellidoOd");
         String dniOd = request.getParameter("dniOd");

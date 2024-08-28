@@ -24,13 +24,13 @@ public class SVUsuarios extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
         
         String usuario = request.getParameter("usuario_registro");
         String contrasenia = request.getParameter("contrasenia_registro");
