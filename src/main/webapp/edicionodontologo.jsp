@@ -13,13 +13,14 @@
                     <div class="card-body p-0">                            
                         <!-- Nested Row within Card Body -->
                         <div class="row justify-content-center">
-
+                        <% Odontologo odEditar  = (Odontologo) (request.getSession().getAttribute("odEditar")); %>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h4 class="h5 text-gray-900 mb-4">Apartado para la edición de odontólogos:</h4>
+                                        <h4 class="h5 text-gray-900 mb-4">Id del odontologo seleccionado: <%=odEditar.getId_persona()%></h4>
                                     </div>
-                                    <% Odontologo odEditar  = (Odontologo) (request.getSession().getAttribute("odEditar")); %>
+                                    
                                     <form class="user" action="SVEditarOdontologos" method="POST">
                                         <div class="form-group">
                                             <input type="text" name="nombreOd" class="form-control form-control-user"
