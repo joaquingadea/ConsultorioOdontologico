@@ -37,7 +37,18 @@ public class ControladoraPersistencia {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+    public Odontologo traerOdontologo(int idEditarOd) {
+        return odontologoJpa.findOdontologo(idEditarOd);
+    }
+
+    public void editarOdontologo(Odontologo odEditar) {
+        try {
+            odontologoJpa.edit(odEditar);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     //CRUD paciente
     public void crearPaciente(Paciente nuevoPac) {
         pacienteJpa.create(nuevoPac);
@@ -46,5 +57,6 @@ public class ControladoraPersistencia {
     public List<Paciente> traerPacientes() {
         return pacienteJpa.findPacienteEntities();
     }
+
 
 }

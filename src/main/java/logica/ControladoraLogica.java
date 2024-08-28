@@ -34,4 +34,12 @@ public class ControladoraLogica {
     public void eliminarOdontologo(int idOdEliminar) {
         controlP.eliminarOdontologo(idOdEliminar);
     }
+
+    public Odontologo traerOdontologo(int idEditarOd) {
+        return controlP.traerOdontologo(idEditarOd);
+    }
+
+    public void editarOdontologo(Odontologo odEditar) {
+        controlP.editarOdontologo(odEditar);
+    }
 }
