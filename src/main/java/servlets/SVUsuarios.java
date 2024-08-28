@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.ControladoraLogica;
 import logica.Usuario;
 
@@ -24,7 +25,19 @@ public class SVUsuarios extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        /*HttpSession misession = request.getSession();
+        String usuario = request.getParameter("usuario_inicio");
+        String contrasenia = request.getParameter("contrasenia_inicio");
+        List<Usuario>listaUsuarios = control.traerUsuarios();
+        for(Usuario usu:listaUsuarios){
+            if(usuario == usu.getUsuario() && contrasenia == usu.getContrasenia_usuario()){
+                response.sendRedirect("index.jsp");
+                break;
+            }
+            else{
+                System.out.println("El usuario o contraseña son incorrectos");
+            }
+        }*/
     }
 
     @Override

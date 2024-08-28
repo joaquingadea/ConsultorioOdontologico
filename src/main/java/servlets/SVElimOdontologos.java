@@ -25,7 +25,7 @@ public class SVElimOdontologos extends HttpServlet {
             throws ServletException, IOException {
         int idOdEliminar = Integer.parseInt(request.getParameter("idOdEliminacion"));
         control.eliminarOdontologo(idOdEliminar);
-        response.sendRedirect("./index.jsp");
+        response.sendRedirect("SVOdontologosAlta");
 
     }
 
