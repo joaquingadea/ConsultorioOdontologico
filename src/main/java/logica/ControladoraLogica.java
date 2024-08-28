@@ -30,4 +30,8 @@ public class ControladoraLogica {
     public List<Paciente> traerPacientes() {
         return controlP.traerPacientes();
     }
+
+    public void eliminarOdontologo(int idOdEliminar) {
+        controlP.eliminarOdontologo(idOdEliminar);
+    }
 }

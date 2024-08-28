@@ -1,9 +1,12 @@
 package persistencia;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import logica.Odontologo;
 import logica.Paciente;
 import logica.Usuario;
+import persistencia.exceptions.NonexistentEntityException;
 
 public class ControladoraPersistencia {
     UsuarioJpaController usuarioJpa = new UsuarioJpaController();
@@ -27,6 +30,13 @@ public class ControladoraPersistencia {
     public void crearOdontologo(Odontologo nuevoOd) {
         odontologoJpa.create(nuevoOd);
     }
+    public void eliminarOdontologo(int idOdEliminar) {
+        try {
+            odontologoJpa.destroy(idOdEliminar);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
     //CRUD paciente
     public void crearPaciente(Paciente nuevoPac) {
@@ -36,5 +46,5 @@ public class ControladoraPersistencia {
     public List<Paciente> traerPacientes() {
         return pacienteJpa.findPacienteEntities();
     }
-    
+
 }
