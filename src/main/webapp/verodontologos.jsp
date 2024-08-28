@@ -6,9 +6,30 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="./componentes/head.jsp" %>
 <%@include file="./componentes/bodyinicio.jsp"  %>
+
+                        <div class="content">
+                            <div class="container-fluid mb-3 ">
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-10">
+                                        <div class="card shadow h-100">
+                                            <div class="card-body text-center">
+                                                <form class="user m-auto" action="SVElimOdontologos" method="GET" >
+                                                    <div class="form-group">
+                                                        <p class="m-0 font-weight-bold text-primary">Id para la edicion de odontologos:</p><br>
+                                                        <input type="text" name="nombreOd" class="form-control form-control-user" placeholder="Nombre...">
+                                                    </div>
+                                                    <button type="submit">
+                                                        Enviar
+                                                    </button>
+                                                </form>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 <div class="container-fluid">
     <div class="card shadow mb-4">
-                        
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary"> Odontólogos registrados en el sistema </h6>
                         </div>
