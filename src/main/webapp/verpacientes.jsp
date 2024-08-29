@@ -7,6 +7,44 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="./componentes/head.jsp" %>
 <%@include file="./componentes/bodyinicio.jsp"  %>
+
+
+<div class="content">
+                            <div class="container-fluid mb-4 ">
+                                <div class="row justify-content-center ">
+                                    <div class="mb-1 mt-1 col-xl-4 col-sm-6 col-l-6 ">
+                                        <div class="card shadow h-100 ">
+                                            <div class="card-body text-center">
+                                                <form class="user" action="SVEditarPacientes" method="GET" >
+                                                    <div class="form-group ">
+                                                        <p class="m-0 font-weight-bold text-primary">Pon el ID del paciente que quieres <span class="text-warning">EDITAR</span>:</p><br>
+                                                        <input type="text" name="idOdEdicion" class="form-control form-control-user" placeholder="ID...">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                        Editar
+                                                    </button>
+                                                </form>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="mb-1 mt-1 col-xl-4 col-sm-6 col-l-6">
+                                        <div class="card shadow h-100 ">
+                                            <div class="card-body text-center">
+                                                <form class="user" action="SVElimPacientes" method="POST" >
+                                                    <div class="form-group ">
+                                                        <p class="m-0 font-weight-bold text-primary">Pon el ID del paciente que quieres <span class="text-danger">ELIMINAR</span>:</p><br>
+                                                        <input type="text" name="idOdEliminacion" class="form-control form-control-user" placeholder="ID...">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                        Eliminar
+                                                    </button>
+                                                </form>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 <div class="container-fluid">
     <div class="card shadow mb-4">
                         
