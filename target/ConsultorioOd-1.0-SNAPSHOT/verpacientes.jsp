@@ -18,7 +18,7 @@
                                                 <form class="user" action="SVEditarPacientes" method="GET" >
                                                     <div class="form-group ">
                                                         <p class="m-0 font-weight-bold text-primary">Pon el ID del paciente que quieres <span class="text-warning">EDITAR</span>:</p><br>
-                                                        <input type="text" name="idOdEdicion" class="form-control form-control-user" placeholder="ID...">
+                                                        <input type="text" name="idPacEdicion" class="form-control form-control-user" placeholder="ID...">
                                                     </div>
                                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                                         Editar
@@ -33,7 +33,7 @@
                                                 <form class="user" action="SVElimPacientes" method="POST" >
                                                     <div class="form-group ">
                                                         <p class="m-0 font-weight-bold text-primary">Pon el ID del paciente que quieres <span class="text-danger">ELIMINAR</span>:</p><br>
-                                                        <input type="text" name="idOdEliminacion" class="form-control form-control-user" placeholder="ID...">
+                                                        <input type="text" name="idPacEliminacion" class="form-control form-control-user" placeholder="ID...">
                                                     </div>
                                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                                         Eliminar
