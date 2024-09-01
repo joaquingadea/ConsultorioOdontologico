@@ -50,6 +50,7 @@ public class ControladoraPersistencia {
     }
 
     //CRUD paciente
+    
     public void crearPaciente(Paciente nuevoPac) {
         pacienteJpa.create(nuevoPac);
     }
